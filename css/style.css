@@ -44,18 +44,51 @@ body {
 }
 
 .heading-primary {
+  backface-visibility: hidden;
   color: #fff;
 }
 
 .heading-quote {
+  animation: moveFromLeft 1s 1s ease-out;
   display: block;
   font-family: "Lobster", cursive;
   font-size: 35px;
 }
 
 .heading-writer {
+  animation: moveFromRight 1s 1s ease-out;
   display: flex;
-  justify-content: flex-end;
+  font-family: "Satisfy", cursive;
   font-size: 20px;
   font-weight: 700;
+  justify-content: flex-end;
+  letter-spacing: 2px;
+}
+
+@keyframes moveFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }

@@ -1,16 +1,22 @@
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  box-sizing: border-box;
   color: #777;
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
-  padding: 25px;
+  padding: 2.5rem;
 }
 
 .header {
@@ -26,17 +32,17 @@ body {
   position: relative;
 }
 
-.logo-container {
-  left: 30px;
+.header__logo-container {
+  left: 3rem;
   position: absolute;
-  top: 30px;
+  top: 3rem;
 }
 
-.logo {
-  height: 70px;
+.header__logo {
+  height: 7rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -47,24 +53,26 @@ body {
 .heading-primary {
   backface-visibility: hidden;
   color: #fff;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
-.heading-quote {
-  animation: moveFromLeft 1s 1s ease-out;
+.heading-primary--quote {
+  animation: moveFromLeft 1s .5s ease-out;
+  animation-fill-mode: backwards;
   display: block;
   font-family: "Lobster", cursive;
-  font-size: 35px;
+  font-size: 3.5rem;
 }
 
-.heading-writer {
-  animation: moveFromRight 1s 1s ease-out;
+.heading-primary--writer {
+  animation: moveFromRight 1s .5s ease-out;
+  animation-fill-mode: backwards;
   display: flex;
   font-family: "Satisfy", cursive;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   justify-content: flex-end;
-  letter-spacing: 2px;
+  letter-spacing: .2rem;
 }
 
 @keyframes moveFromLeft {
@@ -95,11 +103,22 @@ body {
   }
 }
 
+@keyframes moveFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .btn:link,
 .btn:visited {
-  border-radius: 100px;
+  border-radius: 10rem;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   text-transform: uppercase;
   text-decoration: none;
   transition: all .2s;
@@ -112,11 +131,17 @@ body {
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
+  font-size: 1.3rem;
   font-weight: 700;
+}
+
+.btn--animated {
+  animation: moveFromBottom 1s 1s ease-out;
+  animation-fill-mode: backwards;
 }

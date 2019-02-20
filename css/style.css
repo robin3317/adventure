@@ -35,3 +35,27 @@ body {
 .logo {
   height: 70px;
 }
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+}
+
+.heading-quote {
+  display: block;
+  font-family: "Lobster", cursive;
+  font-size: 35px;
+}
+
+.heading-writer {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  font-weight: 700;
+}

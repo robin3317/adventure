@@ -1,0 +1,22 @@
+{
+  "name": "adventure",
+  "version": "1.0.0",
+  "description": "A tour guide app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robin3317/adventure.git"
+  },
+  "author": "@robin4java",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robin3317/adventure/issues"
+  },
+  "homepage": "https://github.com/robin3317/adventure#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

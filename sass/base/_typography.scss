@@ -1,0 +1,32 @@
+body {
+  color: $color-grey-dark;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 2.5rem;
+}
+
+.heading-primary {
+  backface-visibility: hidden;
+  color: $color-white;
+  margin-bottom: 2.5rem;
+
+  &--quote {
+    animation: moveFromLeft 1s .5s ease-out;
+    animation-fill-mode: backwards;
+    display: block;
+    font-family: "Lobster", cursive;
+    font-size: 3.5rem;
+  }
+
+  &--writer {
+    animation: moveFromRight 1s .5s ease-out;
+    animation-fill-mode: backwards;
+    display: flex;
+    font-family: "Satisfy", cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    justify-content: flex-end;
+    letter-spacing: .2rem;
+  }
+}

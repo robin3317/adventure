@@ -103,6 +103,33 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.composition {
+  position: relative; }
+  .composition__photo {
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    outline-offset: 2rem;
+    position: absolute;
+    transition: all .2s;
+    width: 55%;
+    z-index: 5; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 1rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.4);
+      outline: 1.5rem solid rgba(0, 0, 255, 0.8);
+      transform: scale(1.05) translateY(-0.5rem);
+      z-index: 10; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
 .btn:link, .btn:visited {
   border-radius: 10rem;
   display: inline-block;

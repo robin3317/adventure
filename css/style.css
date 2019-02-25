@@ -103,6 +103,34 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.card {
+  height: 50rem;
+  perspective: 150rem;
+  position: relative;
+  -moz-perspective: 150rem; }
+  .card__side {
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    color: #fff;
+    font-size: 1.6rem;
+    height: 50rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .8s ease;
+    width: 100%; }
+    .card__side--font {
+      background-color: #fff; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+  .card:hover .card__side--font {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+
 .composition {
   position: relative; }
   .composition__photo {
